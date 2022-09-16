@@ -1,0 +1,8 @@
+{
+	"ignore": ["dist/**/*"],
+	"delay": "1000",
+	"execMap": {
+		"": "make dev -f"
+	},
+	"ext": "html css"
+}
