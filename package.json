@@ -10,7 +10,7 @@
   "scripts": {
     "build": "make",
     "dist": "make dist",
-    "lint": "eslint . --ignore-path ./.gitignore",
+    "lint": "eslint .",
     "dev": "npx nodemon Makefile"
   },
   "repository": {
@@ -24,8 +24,6 @@
   },
   "homepage": "https://github.com/rndtrash/hamster#readme",
   "dependencies": {
-    "@babel/core": "^7.19.1",
-    "@babel/preset-env": "^7.19.1",
     "clean-css-cli": "^5.6.1",
     "eslint": "^8.23.1",
     "eslint-config-airbnb-base": "^15.0.0",

@@ -11,6 +11,9 @@
   "rules": {
     "quotes": "off",
     "implicit-arrow-linebreak": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "no-tabs": "off",
+    "no-plusplus": "off",
+    "indent": ["error", "tab"]
   }
 }

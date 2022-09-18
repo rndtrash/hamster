@@ -1,10 +1,11 @@
+import { HamVM } from "./hamperter-vm.js";
+
 let hamVM = null;
 
-window.onload = () => {
-    init();
-};
-
-function init()
-{
-    hamVM = new HamVM();
+function init() {
+	hamVM = new HamVM();
 }
+
+window.onload = () => {
+	init();
+};

@@ -1,11 +1,12 @@
-const HamsterState = {
-    OK: Symbol("ok"),
-    DISAPPOINTED: Symbol("disappointed")
+export const HamsterState = {
+	OK: Symbol("ok"),
+	DISAPPOINTED: Symbol("disappointed")
 };
 Object.freeze(HamsterState);
 
-function Hamster(x, y)
-{
-    this.x = x || 0;
-    this.y = y || 0;
+export class Hamster {
+	constructor(x, y) {
+		this.x = x || 0;
+		this.y = y || 0;
+	}
 }

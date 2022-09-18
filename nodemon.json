@@ -2,7 +2,7 @@
 	"ignore": ["dist/**/*"],
 	"delay": "1000",
 	"execMap": {
-		"": "make dev -f"
+		"": "make dev -j4 -f"
 	},
-	"ext": "html css"
+	"ext": "html css js"
 }
