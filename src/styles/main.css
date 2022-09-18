@@ -16,8 +16,11 @@
     --theme-code-selection-background: #fefcca;
     --theme-code-selection-foreground: #000000;
 
-    --tab-height: 26px;
+    --tab-header-height: 26px;
+    --tab-short-side: 23px;
     --line-height: 20px;
+
+    --tab-side-padding: 8px;
 }
 
 html, body {
@@ -38,7 +41,9 @@ body {
     color: var(--theme-foreground);
 
     font-size: 12px;
-    font-family: 'Noto Sans', Geneva, Verdana, sans-serif
+    font-family: 'Noto Sans', Geneva, Verdana, sans-serif;
+
+    user-select: none;
 }
 
 header {
@@ -64,6 +69,8 @@ main {
 
 div.code {
     font-family: monospace;
+
+    user-select: all;
 }
 
 div.code::selection {
@@ -71,24 +78,75 @@ div.code::selection {
     color: var(--theme-code-selection-foreground);
 }
 
-div.tab-bar.vertical.left {
-    grid-area: left;
-}
-
-div.tab-bar.vertical.right {
-    grid-area: right;
-}
-
 div.code {
     grid-area: main;
 }
 
-div.tab-bar.horizontal {
-    grid-area: footer;
+div.tab-bar {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
-div.tab-bar {
-    /* */
+div.tab-bar.vertical {
+    width: var(--tab-short-side);
+
+    flex-direction: column;
+}
+
+div.tab-bar.vertical.left {
+    grid-area: left;
+
+    box-shadow: inset var(--theme-border) -1px 0;
+}
+
+div.tab-bar.vertical.right {
+    grid-area: right;
+
+    box-shadow: inset var(--theme-border) 1px 0;
+}
+
+div.tab-bar.horizontal {
+    grid-area: footer;
+
+    flex-direction: row;
+
+    height: var(--tab-short-side);
+    padding: 0 calc(var(--tab-short-side) - 1px);
+
+    border-top: solid 1px var(--theme-border);
+}
+
+div.tab {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.tab:hover {
+    background: var(--theme-tab-selected);
+}
+
+div.tab-bar.horizontal > div.tab {
+    padding: 0 var(--tab-side-padding);
+
+    height: 100%;
+}
+
+div.tab-bar.vertical > div.tab {
+    padding: var(--tab-side-padding) 0;
+
+    flex-direction: column;
+
+    width: 100%;
+}
+
+div.tab-bar.vertical > div.tab > span.name {
+    writing-mode: vertical-lr;
+}
+
+div.tab-bar.vertical.left > div.tab > span.name {
+    transform: rotate(180deg);
 }
 
 footer {
