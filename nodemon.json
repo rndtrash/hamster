@@ -1,5 +1,5 @@
 {
-	"ignore": ["dist/**/*"],
+	"ignore": ["dist/**/*", "3rd/**/*"],
 	"delay": "1000",
 	"execMap": {
 		"": "make dev -j4 -f"
