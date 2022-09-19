@@ -24,7 +24,7 @@ dist/styles/%.css: src/styles/%.css
 	mkdir -p dist/styles
 	npx clean-css-cli $< -o $@
 
-js: dist/js/hamster-language.js dist/js/hamperter-vm.js dist/js/hamsper.js dist/js/main.js
+js: dist/js/hamster-language.js dist/js/hamasm-language.js dist/js/hamperter-vm.js dist/js/hamsper.js dist/js/main.js
 
 dist/js/%.js: js/%.js
 	mkdir -p dist/js

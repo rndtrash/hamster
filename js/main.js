@@ -1,6 +1,6 @@
 import { HamVM } from "./hamperter-vm.js";
 import { registerHamsterLanguage, hamsterLangId } from "./hamster-language.js";
-import { registerHamAsmLanguage, hamsteasmangId } from "./hamasm-language.js";
+import { registerHamAsmLanguage, hamasmLangId } from "./hamasm-language.js";
 
 let hamVM = null;
 let editor = null;
