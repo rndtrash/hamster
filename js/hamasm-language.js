@@ -1,9 +1,9 @@
-export const hamsterLangId = 'hamster';
-const keywords = ['функция', 'возврат'];
+export const hamasmLangId = 'hamAsm';
+const keywords = ['mov', 'nop'];
 
-export function registerHamsterLanguage() {
-	monaco.languages.register({ id: hamsterLangId });
-	monaco.languages.setMonarchTokensProvider(hamsterLangId, {
+export function registerHamAsmLanguage() {
+	monaco.languages.register({ id: hamasmLangId });
+	monaco.languages.setMonarchTokensProvider(hamasmLangId, {
 		keywords,
 		tokenizer: {
 			root: [
